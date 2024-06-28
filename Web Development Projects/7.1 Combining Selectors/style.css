@@ -1,0 +1,39 @@
+/* Write your code here: */
+
+/* Group */
+h1, h2 {
+  color: blueviolet;
+}
+/* .class 이든 #id 이든 그냥 태그든지 콤마로 나열하면 모두 적용할 수 있다 */ 
+
+/* Child */
+.box > .done {
+  color: firebrick;
+}
+/* 꺽새를 쓰면 직계자식(direct child)만을 타겟하여 적용할 수 있다
+그래서 .box, .done 으로 쓴다면 모든 .done 이 타겟되겠지만 child selector를 쓰면
+.box 의 하위에 있는 직계자식인 .done 만을 타겟하는 것 */
+/* 근데 난 이렇게 했는데 선생님은 .box > p 로 썼음.. 결과는 같긴 함 */
+
+/* Descendant */
+.box li {
+  color: blue;
+}
+/*
+.box .list {
+  color: blue;
+}
+난 이렇게 썼는데 선생님은 box li { } 로 썼음.. 일단 .list 나 li 나 결과는 같긴 함 */
+
+/* Chaining */
+li.done {
+  color: seagreen;
+}
+/* 태그요소부터 쓰고 특정 클래스나 특정 아이디를 이어붙여쓰면 더 특별하게 타겟팅 가능 */
+
+/* Combining Combiners */
+ul p.done {
+  font-size: 0.5rem;
+}
+/* Descendant 와 chaining 을 써서 ul 의 하위에 있는 p 태그 중에 done 클래스만을 타겟 */
+/* 나는 child 와 chaining 을 썼지만 결과는 같음. ul > p.done 이렇게.. */
