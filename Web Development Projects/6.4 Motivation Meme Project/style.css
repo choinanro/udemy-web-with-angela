@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+}
+/* 배경색 같은 걸 지정할 때 꼭 생각이 안 나서 html 대상으로 썼는데 body 로 쓰자 ... */
+
+.poster {
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+}
+
+.motivation-img {
+  border: 5px solid white;
+  width: 100%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3rem; /* 폰트사이즈에 관한 지시는 없었던 것 같은데... 무튼 */
+}
