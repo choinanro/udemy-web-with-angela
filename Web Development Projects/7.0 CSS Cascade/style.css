@@ -3,7 +3,6 @@
 .box {
   background-color: blue;
   padding: 10px;
-  color: red;
 }
 
 p {
@@ -17,9 +16,12 @@ p {
 }
 
 .inner-box {
-  color: red;
+  background-color: red;
+  padding: 10px;
 }
+/* inner-box 클래스는 box 클래스의 아래에 있어야 cascading 위치로 인해 재정의 될 수 있을 것. 위에 있으면 색 안 변함 */
 
 #outer-box {
-  color: blueviolet;
+  background-color: purple;
 }
+/* padding: 10px; 는 적용할 필요 없음. 이미 box 에 패딩 10px 이 있기 떄문에 */
