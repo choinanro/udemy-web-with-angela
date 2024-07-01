@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Positioning Exercise</title>
+  <style>
+    /* Write your code here */
+
+    .blue-box {
+      background-color: blue;
+      width: 500px;
+      height: 300px;
+      position: static;
+      margin-top: 200px;
+      margin-left: 200px;
+    }
+
+    .red-circle {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      top: 350px;
+      left: 450px;
+    }
+
+    /* 절대위치와 상대위치 사용 가능
+      상대위치일 경우엔 top: 200px left: 200px 주면 된다는데 흠....
+      추후 다시 이해해봐야겠다.
+      
+    .blue-box {
+      background-color: blue;
+      width: 500px;
+      height: 300px;
+      position: relative;
+      top: 200px; or 50%;
+      left: 200px; or 50%;
+    }
+
+    .red-circle {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      top: 150px;
+      left: 250px;
+    }
+      */
+  </style>
+</head>
+
+<body>
+  <div class="blue-box">
+    <div class="red-circle">
+    </div>
+  </div>
+
+</body>
+
+</html>
