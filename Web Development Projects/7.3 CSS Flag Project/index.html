@@ -7,6 +7,7 @@
   <style>
     /* Write your CSS Code here */
 
+    /* Red rect */
     .flag {
       background-color: rgb(206, 17, 38);
       width: 900px;
@@ -15,41 +16,57 @@
       border: solid black;
     }
 
+    /* Blue rect */
     .flag > div {
       background-color: rgb(0, 40, 104);
       width: 900px;
       height: 300px;
-      position: relative;
-      top: 15
-      border: solid purple;
+      position: absolute;
+      top: 150px;
+      /* border: solid purple; */
     }
 
-    .flag p {
-      color: white;
-      text-align: center;
-      font-size: 500%;
-      margin: 0px;
-      border: solid skyblue;
-    }
-
+    /* White circle */
     .flag > div > div {
       background-color: white;
       width: 200px;
       height: 200px;
       border-radius: 50%;
       position: absolute;
-      top: 15%;
-      left: 350px; /* 국기 너비가 900이면 중앙점이 450지점인데 원의 반지름이 100이니 */
-      border: solid yellow;
+      top: 50px; /* 부모인 파란색 div 가 300px 이고 원은 200px 이니 가운데정렬하려면 위아래 여백 50px 필요 */
+      left: 350px; /* 국기 너비가 900px 이면 중앙점이 450px 지점인데 원의 반지름이 100px 이니 */
+      /* border: solid yellow; */
     }
 
-    .flag > div > div > p {
+    /* The Flag */
+    .flag p {
+      color: white;
+      text-align: center;
+      font-size: 500%;
+      margin: 0px;
+      /* border: solid skyblue; */
+    }
+
+    /* of Laos */
+    .flag > div > div > p { /* body > div > div > div > p 처럼 css 검사에서 copy selector 를 복사해 올 수도 있음 */
       color: black;
       font-size: 500%;
-      position: relative;
-      top: -75px;
-      border: solid orange;
+      /* position: relative;
+      top: -75px; */
+      /* border: solid orange; */
     }
+
+    /* 내가 한 방법 대신 선생님은 p 로 한꺼번에
+    p {
+      margin: 0;
+      font-size: 5rem;
+      text-align: center;
+      color: white;
+    } 를 준 다음
+    .flag div div p {
+    } 에 컬러만 블랙으로 주는 방법을 택함
+     이건 descendant combination 인데.. 상위선택기를 쓰고 하위선택기를 써서 쭉쭉 하위 어떤 것이든 스타일링 가능
+     */
     
   </style>
 </head>
