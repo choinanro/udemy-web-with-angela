@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+TODO: Change the background color for each device
+[lightsalmon] Mobile Devices: 319px — 480px
+[powderblue] iPads and Tablets: 481px — 1200px
+[limegreen] Laptops: 1201px — 1600px
+[seagreen] Desktops: 1601px and more
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Media Query</title>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+
+    /** 선생님은 이렇게 썼음.. 더 좋은 이해를 바탕으로 한다면 이게 가장 베스트인 듯
+    모바일을 타겟으로 할 때 min최소 max최대로 범위를 지정해줄 수도 있지만
+    모바일 크기보다 작은 건 웹사이트를 보여주는 일이 없기 때문에 그냥 최대 480px보다 작거나 같으면 살몬색으로 보여줘라 **/
+    @media (max-width: 480px) {
+      body {
+        background-color: lightsalmon;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 1200px) {
+      body {
+        background-color: powderblue;
+      }
+    }
+
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      body {
+        background-color: limegreen;
+      }
+    }
+
+    /** 최소 1601px보다 같거나 큰 건 모두 씨그린색으로 보여줘라 **/
+    @media (min-width: 1601px) {
+      body {
+        background-color: seagreen;
+      }
+    }
+
+    /** min-width 의미와 max-width 를 혼동하지 말 것 **/
+
+    /** 난 이렇게 썼었고
+    @media (min-width: 319px) and (max-width: 480px){
+      body {
+        background-color: lightsalmon;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 1200px){
+      body {
+        background-color: powderblue;
+      }
+    }
+
+    @media (min-width: 1201px) and (max-width: 1600px){
+      body {
+        background-color: limegreen;
+      }
+    }
+
+    @media (min-width: 1601px){
+      body {
+        background-color: seagreen;
+      }
+    } **/
+    
+    /** 이렇게 써도 되고
+    @media (max-width: 1601px) {
+      body {
+        background-color: seagreen;
+      }
+    }
+
+    @media (max-width: 1201px) {
+      body {
+        background-color: limegreen;
+      }
+    }
+
+    @media (max-width: 481px) {
+      body {
+        background-color: powderblue;
+      }
+    }
+
+    @media (max-width: 319px){
+      body {
+        background-color: lightsalmon;
+      }
+    } **/
+    
+  </style>
+</head>
+
+<body>
+</body>
+
+</html>
