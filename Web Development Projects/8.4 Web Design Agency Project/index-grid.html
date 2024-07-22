@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agency</title>
+  <link rel="stylesheet" href="./style-grid.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+</head>
+
+<body>
+  <div class="main">
+    <img class="logo" src="./assets/images/logo.png" alt="logo">
+    <h1>We are a <a class="h1-highlight">Creative</a> Design Agency</h1>
+    <div class="grid-container">
+      <div class="left card"><img class="tile-image" src="./assets/images/beautiful.jpg" alt="hand and flower in water">
+        <h2 class="card-title">Beauty</h2>
+        <p class="card-text">We strive to create the most beautiful websites for all your needs. Working closely with you
+          to
+          design and
+          develop an amazing website for your business.</p>
+      </div>
+      <div class="right card"><img class="tile-image" src="./assets/images/construction.jpg" alt="metal structure">
+        <h2 class="card-title">Construction</h2>
+        <p>Built by our team of professional developers, we ensure the most rigourous and modern websites. Built from
+          scratch using HTML and CSS. Only the best for you.</p>
+      </div>
+    </div>
+    
+  </div>
+  <footer>
+    <p>Create. Develop. Design.</p>
+  </footer>
+
+</body>
+
+</html>
+
+<!--
+목표: layout (block, inline-block) 과 float 이용 + 반응형 웹 만들기
+
+레이아웃을 위해 블록이 어떻게 구성되어 있는지 파악해보면, 로고 한 줄 / h1 타이틀 한 줄 / 이미지+텍스트 한 줄 / footer 한 줄
+
+
+flex 로 행 column 을 2행으로 만들기
+  display: flex; 로 되어 있고
+  flex-direction: column; 으로 방향설정 되어 있는데
+  div 클래스 뭉탱이가 flex: 1; 이기 때문에 2행으로 만드려면 쪼개서 left card 에서 flex: 1; right card 에서 flex: 1; 각각 해줘야 할 듯
+
+left card 와 right card 를 좌우로 배치
+
+card 에 h2 와 p 태그 타겟으로 float 사용하여 이미지랑 텍스트 섞기
+
+h1 내 특정 단어에 a 태그로 클래스 추가하여 색 하이라이트 넣기
+
+반응형 웹을 위한 미디어쿼리 사용해서 세로방향 일자로 쌓여서 배치되게 하기 (사이즈 600 정도라고 한 듯)
+그냥 flex 를 풀면 될 것 같기도
+
+footer 가 제일 아래 오른쪽에 붙어 아무 디스플레이에도 영향 안 받게 하려면
+  clear: right;
+ -->

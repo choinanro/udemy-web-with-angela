@@ -1,0 +1,67 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+  min-height: 95vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.tile-image {
+  width: 300px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  float: left;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.h1-highlight {
+  color: rgb(174, 174, 254);
+}
+/** 난 a 태그에 클래스를 지정했지만 선생님은 span 태그에 클래스를 지정해서 하이라이트색 줬음 **/
+
+footer {
+  text-align: right;
+  color: midnightblue;
+  clear: right;
+}
+
+@media (max-width: 680px) {
+  body {
+    display: block;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .grid-container {
+    display: block;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .tile-image {
+    float: none;
+    margin-bottom: -15px;
+    /** width: 어떻게 해야 오토처럼 늘어나더라..? **/
+    max-width: 100%;
+    width: auto;
+    /** 찾긴 찾았음. 그냥 width: auto; 하면 안 먹고, max-width 까지 설정해줘야 적용됨. 이유는 모름 ..;; **/
+    object-fit: cover;
+    /** object-fit: cover; 을 안 쓴 채 똑같이 만든 것 같지만,, 선생님은 .card img 에 margin-bottom / width / display: inline; / object-fit: cover; 이렇게 적용함 **/
+  }
+  /** .tile-image 도 되고 .card img 도 똑같은 타겟 **/
+}
