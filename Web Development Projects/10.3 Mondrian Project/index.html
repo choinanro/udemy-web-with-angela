@@ -23,12 +23,16 @@
     /* 그리드 분할 방향성: 큼지막하게 잘라서 나중에 또 자를까 했으나 그렇게 하지 않고,
     그냥 제일 작은 상자를 기준으로 쪼개면 4x4 (row 4 column 4)로 16개의 아이템박스를 만들자 */
 
+    /* 안젤라도 4x4 로 만들었지만 아이템은 결과물에 보이는 9개만 만들고 시작했음 .. */
+
     .container {
       display: grid;
       width: 748px;
-      height: 748px;
-      grid-template-rows: 414px 130px 155px 20px;
+      height: 747px; /* 뭐지 dimensions 에는 height 748px 인데 다 더하면 747px 인데... */
       grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 156px 20px;
+      /* 왜 414px 130px 155px 20px 으로 하면 컨테이너 가장 밑에 갭이 생길까..*/
+      /* 왜 안젤라는 grid-template-rows: 414px 130px 155px 22px; */
 
       /* gap 에 컬러는 못 주니 배경색을 주고 갭을 주면 갭에 컬러 넣은 것 같은 효과 */
       background-color: #000;
@@ -45,10 +49,12 @@
 
     .two {
       grid-area: 1 / 2 / 2 / 5;
+      /* or grid-column: span 3; */
     }
 
     .three {
       grid-area: 2 / 1 / 4 / 2;
+      /* or grid-row: span 2; */
     }
 
     .four {
@@ -57,13 +63,13 @@
 
     .blue {
       background-color: #004592;
-      padding-bottom: 1px;
-      border-color: #000;
       grid-area: 2 / 4 / 3 / 5;
+      border-bottom: 10px solid #000; /* 아이템의 height 를 제한하면 border 이 안 먹힘 */
     }
 
     .six {
       grid-area: 3 / 4 / 5 / 5;
+      /* border-top: 10px solid #000; 특정 라인에만 갭을 더 준 것처럼 */
     }
 
     .yellow {
@@ -81,15 +87,16 @@
    
   <!-- 아이템은 넘버링 해두고 나중에 필요 시 지우는 걸로 하자 -->
   <div class="grid container">
-    <div class="item red">1</div>
-    <div class="item two">2</div>
-    <div class="item three">3</div>
-    <div class="item four">4</div>
-    <div class="item blue">5</div>
-    <div class="item six">6</div>
-    <div class="item">7</div>
-    <div class="item yellow">8</div>
-    <div class="item black">9</div>
+    <div class="item red"></div>
+    <div class="item two"></div>
+    <div class="item three"></div>
+    <div class="item four"></div>
+    <div class="item blue"></div>
+    <div class="item six"></div>
+    <div class="item seven"></div>
+    <div class="item yellow"></div>
+    <div class="item black"></div>
+    <!-- 특정 색상 아이템 외에 다른 아이템은 white1,2,3로 넘버링하는 게 좋았을 것 같다 -->
 
     <!-- <div class="item">10</div>
     <div class="item">11</div>
