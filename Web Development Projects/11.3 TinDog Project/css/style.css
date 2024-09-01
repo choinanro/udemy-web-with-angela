@@ -16,11 +16,9 @@
   }
 }
 
-@media (max-width: 480px) {
-  .logo {
-
-  }
-}
+/* #title-reverse {
+  order: 1;
+} */
 
 .icon-square {
   width: 3rem;
@@ -28,11 +26,18 @@
   border-radius: 0.75rem;
 }
 
-.profile-img {
+/* .profile-img {
   height: 100px;
   border-radius: 50%;
-}
+} html 에서 class 로 설정했음 */
 
 #testimonial {
   background-color: rgb(245, 245, 245);
 }
+
+/* #card-grid {
+  display: grid;
+  justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%;
+} */
